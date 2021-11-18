@@ -1,0 +1,43 @@
+*{
+    box-sizing:border-box;
+}
+
+img {
+    height: 50px;
+    width: 75px;
+}
+
+body{
+    font-size: 16px;
+    font-family: quicksand, oswald, sans-serif;
+}
+h3{
+    font-weight: bold;
+}
+.forecast {
+    font-size: .9em;
+}
+span{
+    font-size: 1em;
+}
+li{
+    text-align: center;
+}
+li:hover{
+    background-color: lightskyblue;
+    text-decoration: underline;
+
+}
+a{
+    text-decoration: none;
+    background-color: white;
+}
+header{
+    background-image: linear-gradient(blue, purple, orange);
+}
+
+.list-group-item {
+    color:black;
+    font-size: 20px;
+    font-weight: 400;
+}
