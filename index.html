@@ -30,7 +30,7 @@
                 </h2>
                 <!-- text box to store searched city name-->
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" id="search-city" placeholder="Austin">
+                    <input type="text" class="form-control" id="search-city" placeholder="Ex. Austin">
                     <div class="input-group-append">
                         <button id="searchBtn" class="button"
                         href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="1.5em" height="1.5em"
@@ -49,7 +49,7 @@
                     </div>
                 </div>
                 <!-- section for clear search history-->
-                <button id="clear-History" class=" btn btn-secondary">Clear Search History</button>
+                <button id="clear-history" class=" btn btn-secondary">Clear Search History</button>
                 <!-- list of cities searched-->
                 <ul class="list-group">
                     
@@ -58,9 +58,8 @@
             <div class="col-sm-8">
                 <div class="rpw ml-1 border border-primary rounded">
                     <div class="col-sm-12" id="current-weather">
-                        <h2 class="city-name mb-1 myt-2 bolder" id="current-city">Weather in Austin</h2>
-                        <img class="weather-icon img-fluid max-with:100% height:auto "
-                        src="https://i1.wp.com/tribeza.com/wp-content/uploads/2020/09/aerial0019.jpg?w=750&ssl=1" alt="">
+                        <h2 class="city-name mb-1 myt-2 bolder" id="current-city"></h2>
+                        <p>Description: <span class="current" id="description"></span></p>
                         <p> Temperature: <span class="current" id="temperature"></span></p>
                         <p> Humidity: <span class="current" id="humidity"></span></p>
                         <p> Wind Speed: <span class="current" id="wind-speed"></span></p>

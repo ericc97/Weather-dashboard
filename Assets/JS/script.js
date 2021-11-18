@@ -10,6 +10,7 @@ var currentTemperature = $("#temperature");
 var currentHumidity = $("#humidity");
 var currentWindSpeed = $("#wind-speed");
 var currentUvIndex = $("#uv-index");
+var currentDescription = $("#description");
 var sCity = [];
 
 // search the city to see if it exists in the entries from local storage
@@ -32,6 +33,7 @@ var displayWeather = function (event) {
     if (searchCity.val().trim() !== "") {
         city = searchCity.val().trim();
         currentWeather(city);
+        $("#search-city").val('');
     }
 }
 
@@ -55,7 +57,13 @@ var currentWeather = function(city){
         var date = new Date(response.dt*1000).toLocaleDateString();
 
         // parse response for name of city and concatenating date and icon 
-        $(currentCity).html(response.name + "(" + date + ")" + "<img src=" + iconUrl + " > ");
+        $(currentCity).html(response.name + " (" + date + ")" + "<img src=" + iconUrl + " >");
+
+        var description = response.weather[0].description;
+        console.log(description);
+
+        $(currentDescription).html((description));
+        
 
         // List weather info + icon or type ex. mph, fahrenheit symbol
 
@@ -185,12 +193,17 @@ var loadLastCity = function(){
 }
 
 // when clear search history is clicked removed listed cities
-
-
+var clearSearchBtn = function(event){
+    event.preventDefault();
+    sCity = [];
+    localStorage.removeItem("cityname");
+    document.location.reload();
+}
 
 
 
 $("#searchBtn").on("click", displayWeather);
-
+$(document).on("click", activatePastSearch);
 $(window).on("load", loadLastCity);
+$("#clear-history").on("click", clearSearchBtn);
 
