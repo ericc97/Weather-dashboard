@@ -70,7 +70,7 @@ var currentWeather = function(city){
         //parse response to display current temperature. 
         // convert given temp to fahrenheit
         var tempF = (response.main.temp -273.15) * 1.8 + 32;
-        $(currentTemperature).html((tempF).toFixed(2) + " &#8457" );
+        $(currentTemperature).html((tempF).toFixed() + " &#8457" );
         console.log(tempF);
 
         //display humidity 
@@ -142,7 +142,7 @@ var forecast = function(cityid){
             var futureIconUrl = "http://openweathermap.org/img/wn/" + weatherIconCode + ".png";
             var tempKelvin = response.list[((i+1)*8)-1].main.temp;
             // convert tempKelvin to tempFahrenheit
-            var tempFahrenheit = (((tempKelvin-273.5)*1.80)+32).toFixed(2);
+            var tempFahrenheit = (((tempKelvin-273.5)*1.80)+32).toFixed();
 
             var humidity = response.list[((i+1)*8)-1].main.humidity;
             
