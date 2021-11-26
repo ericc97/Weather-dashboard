@@ -6,7 +6,7 @@ This app is designed for anyone and everyone that wants to know more about the c
 
 
 ### Jumbotron Screenshot 
-![Weather Dashbaord](./assets/images/weather.png "Weather landing page image")
+![Weather Dashbaord](./assets/images/hero-page-image.png "Weather landing page image")
 
 
 
