@@ -182,6 +182,7 @@ var activatePastSearch = function(event){
 var loadLastCity = function(){
     $("ul").empty();
     var sCity = JSON.parse(localStorage.getItem("cityname"));
+    
     if (sCity !== null){
         sCity = JSON.parse(localStorage.getItem("cityname"));
         for (i = 0; i < sCity.length; i++){
